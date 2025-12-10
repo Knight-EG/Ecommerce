@@ -1,0 +1,230 @@
+/* Light Mode */
+body.light {
+  background-color: #f8f9fa;
+  color: #222;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+body.dark .navbar-brand {
+  color: #fff;
+}
+body.dark .form-select {
+  color: #fff;
+  background-color: #222;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background-color: #1e1e1e !important;
+}
+body.dark header {
+  background-color: #121212 !important;
+}
+body.dark .nav-link {
+  color: #ddd !important;
+}
+body.dark i {
+  color: #ddd !important;
+}
+body.dark .text-muted {
+  color: #fff !important;
+}
+body.dark .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark footer.footer {
+  background-color: #0e0e0e;
+}
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.06);
+}
+
+.product-card .btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover .btn {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+/* ============================
+   PRODUCT CARD DARK MODE
+   ============================ */
+.dark .product-card {
+  background-color: #181818 !important;
+  color: #f1f1f1 !important;
+}
+
+.dark .product-card h3,
+.dark .product-card h2 {
+  color: #e6e6e6 !important;
+}
+
+.dark .product-price {
+  color: #4da3ff !important;
+}
+
+.dark .product-rating i {
+  color: #f4c542 !important;
+}
+/* ============================
+   Modal CARD 
+   ============================ */
+.welcome-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+}
+
+.welcome-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  transform: scale(0.8);
+  transition: transform 0.4s;
+}
+
+.welcome-modal.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-icon {
+  font-size: 4rem;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.modal-text {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #e74c3c;
+}
+
+body.dark .modal-content {
+  background: #000;
+}
+
+body.dark .modal-text,
+body.dark .modal-title {
+  color: #fff;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-wrapper {
+  position: relative;
+}
+
+.product-wrapper:hover .product-card {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 20;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.favorite-btn:hover {
+  color: white;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-btn i {
+  font-size: 18px;
+  transition: color 0.25s ease;
+}
+
+.favorite-btn:hover i {
+  color: #ff385c;
+}

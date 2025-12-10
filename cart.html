@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopHub</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body class="light">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">
+          Online<span class="text-primary">Store</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2 fw-semibold">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Categories</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Deals</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+
+          <form class="d-flex me-3">
+            <input
+              class="form-control me-2"
+              id="searchInput"
+              type="search"
+              placeholder="Search products..."
+            />
+            <button class="btn btn-primary">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="text-dark fs-5"
+              ><i class="fa-solid fa-user"></i
+            ></a>
+
+            <a href="cart.html" class="text-dark position-relative fs-5">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span
+                id="cart-count"
+                class="cart-count position-absolute translate-middle badge rounded-pill bg-danger"
+              >
+                0
+              </span>
+            </a>
+
+            <div id="themeToggle" class="fs-5 cursor-pointer">
+              <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="py-4 bg-white border-bottom">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h1 class="fw-bold mb-0">Shopping Cart</h1>
+      <button id="empty-cart-btn" class="btn btn-outline-danger btn-sm">
+        <i class="fas fa-trash-alt me-2"></i>Empty Cart
+      </button>
+    </div>
+
+    <p class="text-muted mb-0">
+      <a href="#" class="text-decoration-none">Home</a> /
+      <a href="#" class="text-decoration-none">Shop</a> /
+      <span class="fw-semibold">Cart</span>
+    </p>
+  </div>
+</section>
+
+    <div class="container my-5" id="cart-container">
+      <div class="row">
+        <div class="col-lg-8 mb-4">
+          <div class="table-responsive shadow-sm bg-white p-3 rounded">
+            <table class="table align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+
+              <tbody id="cart-items"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="shadow-sm bg-white p-4 rounded">
+            <h3 class="mb-3">Order Summary</h3>
+
+            <div id="summaryy-total" class="p-3 border rounded mb-3"></div>
+
+            <h5>Promo Code</h5>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter code"
+              />
+              <button class="btn btn-primary">Apply</button>
+            </div>
+
+            <button class="btn btn-success w-100 mb-3">
+              Proceed to Checkout
+            </button>
+            <a
+              href="#"
+              class="d-block text-center text-primary text-decoration-none"
+              >Continue Shopping</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <h3 class="fw-bold">
+              Ecommerce <span class="text-primary">Website</span>
+            </h3>
+            <p>We provide the best products with the best prices.</p>
+            <div class="d-flex gap-3">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-youtube"></i>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-white text-decoration-none" href="#">Home</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#">Shop</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#">About</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#">Contact</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#">Blog</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#">FAQ</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h5>Customer Service</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-white text-decoration-none" href="#"
+                  >My Account</a
+                >
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#"
+                  >Order Tracking</a
+                >
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#">Wishlist</a>
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#"
+                  >Returns & Refunds</a
+                >
+              </li>
+              <li>
+                <a class="text-white text-decoration-none" href="#"
+                  >Size Guide</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 mb-4">
+            <h5>Newsletter</h5>
+            <p>Subscribe to get updates.</p>
+            <input
+              class="form-control mb-2"
+              type="email"
+              placeholder="Your email"
+            />
+            <button class="btn btn-primary w-100 mb-3">Subscribe</button>
+
+            <h6>We Accept</h6>
+            <div class="d-flex gap-3 fs-4">
+              <i class="fab fa-cc-visa"></i>
+              <i class="fab fa-cc-mastercard"></i>
+              <i class="fab fa-cc-amex"></i>
+              <i class="fab fa-cc-paypal"></i>
+              <i class="fab fa-cc-apple-pay"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
